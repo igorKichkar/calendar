@@ -41,6 +41,11 @@
         let callback = () => {
             let date = $("#date").val();
             let days = $("#days").val();
+            if(!Number.isInteger(+days)){
+                $("#result").empty();
+                $("#result").append("Колличество дней больничного должно быть ЦЕЛЫМ ЧИСЛОМ");
+                return;
+            }
             if (days < 1) {
                 $("#result").empty();
                 $("#result").append("Колличество дней больничного должно быть больше 0");
