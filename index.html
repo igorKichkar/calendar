@@ -13,7 +13,7 @@
 </head>
 
 <body style="padding:20px;background-color: #E3FCFF;">
-    <p>Колличествово дней больничного:</p>
+    <p>Колличество дней больничного:</p>
     <div class="input-group input-group-lg">
         <input id="days" min="0" type="number" value="146" class="form-control" aria-label="Large"
             aria-describedby="inputGroup-sizing-sm">
@@ -43,7 +43,7 @@
             let days = $("#days").val();
             if (days < 1) {
                 $("#result").empty();
-                $("#result").append("Колличествово дней больничного должно быть больше 0");
+                $("#result").append("Колличество дней больничного должно быть больше 0");
                 return;
             }
 
