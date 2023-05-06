@@ -41,6 +41,11 @@
         let callback = () => {
             let date = $("#date").val();
             let days = $("#days").val();
+            if (days < 1) {
+                $("#result").empty();
+                $("#result").append("Колличествово дней больничного должно быть больше 0");
+                return;
+            }
 
             let obj_date = new Date(date);
             obj_date.setDate(obj_date.getDate() + (days - 1));
